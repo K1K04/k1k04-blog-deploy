@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Git | k1k04-blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Git" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Este es el blog de k1k04 para subir practicas." />
+<meta property="og:description" content="Este es el blog de k1k04 para subir practicas." />
+<link rel="canonical" href="/git/" />
+<meta property="og:url" content="/git/" />
+<meta property="og:site_name" content="k1k04-blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Git" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Este es el blog de k1k04 para subir practicas.","headline":"Git","url":"/git/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://previews.123rf.com/images/popaukropa/popaukropa1710/popaukropa171000042/87469433-letra-k-letra-bitcoin-alfabeto-de-criptomonedas-letras-de-dinero-virtual-ilustraci%C3%B3n-vectorial.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://previews.123rf.com/images/popaukropa/popaukropa1710/popaukropa171000042/87469433-letra-k-letra-bitcoin-alfabeto-de-criptomonedas-letras-de-dinero-virtual-ilustraci%C3%B3n-vectorial.jpg">  
+</head>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>k1k04-blog</h1>
+        <p>Este es el blog de k1k04 para subir practicas.</p>
+	<nav>
+		<ul>
+     			 <li><a href="/">Home</a></li>
+     			 <li><a href="/kiko/">Kiko</a></li>
+      			<li><a href="/lxc/">LXC</a></li>
+			<li><a href="/temas-jekyll/">Temas-jekyll</a></li>
+			<li><a href="/git/">GIT</a></li>
+		</ul>
+	</nav>
+
+      </header>
+      <section>
+        <h1 id="git-y-github">Git y GitHub</h1>
+
+<p><img src="https://live.staticflickr.com/65535/40666021673_fb324524ec_b.jpg" alt="alt text" /></p>
+
+<p>## Comandos basicos</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comando</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git init</code></td>
+      <td>Inicializa un nuevo repositorio Git.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git clone &lt;URL&gt;</code></td>
+      <td>Clona un repositorio remoto a tu máquina local.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git status</code></td>
+      <td>Muestra el estado actual del repositorio (archivos modificados, etc.).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git add &lt;archivo&gt;</code></td>
+      <td>Añade un archivo específico al área de preparación.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git add .</code></td>
+      <td>Añade todos los archivos modificados al área de preparación.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git commit -m "&lt;mensaje&gt;"</code></td>
+      <td>Realiza un commit con un mensaje descriptivo.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git log</code></td>
+      <td>Muestra el historial de commits.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git diff</code></td>
+      <td>Muestra las diferencias entre los archivos modificados y el último commit.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git branch</code></td>
+      <td>Muestra las ramas en el repositorio.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git branch &lt;nombre_rama&gt;</code></td>
+      <td>Crea una nueva rama con el nombre especificado.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git checkout &lt;nombre_rama&gt;</code></td>
+      <td>Cambia a la rama especificada.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git merge &lt;nombre_rama&gt;</code></td>
+      <td>Fusiona la rama especificada en la rama actual.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git remote add origin &lt;URL&gt;</code></td>
+      <td>Vincula tu repositorio local a un repositorio remoto.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git push</code></td>
+      <td>Envía tus commits al repositorio remoto.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git pull</code></td>
+      <td>Obtiene y fusiona cambios del repositorio remoto a tu rama actual.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git fetch</code></td>
+      <td>Obtiene cambios del repositorio remoto sin fusionar.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git reset &lt;archivo&gt;</code></td>
+      <td>Elimina un archivo del área de preparación, pero no de los cambios locales.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git stash</code></td>
+      <td>Guarda temporalmente cambios no confirmados.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git stash pop</code></td>
+      <td>Recupera los cambios guardados por el último <code class="language-plaintext highlighter-rouge">git stash</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git revert &lt;commit&gt;</code></td>
+      <td>Crea un nuevo commit que deshace los cambios de un commit anterior.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Utilizaremos git para realizar el control de versiones de los proyectos que realicemos en la asignatura. Deberás ir realizando los proyectos de forma incremental, y registrar los cambios (commits) realizados.</p>
+
+<p>## Empezemos
+   Primero instalaremos el git.</p>
+
+<p><code class="language-plaintext highlighter-rouge">sudo apt install git</code></p>
+
+<p>Configurar git.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   git config --global user.name "John Doe"
+   git config --global user.email johndoe@example.com`
+</code></pre></div></div>
+<p>Iremos a nuestro directorio y lo inicializamos.
+   <code class="language-plaintext highlighter-rouge">git init</code></p>
+
+<p>## Ventajas de Utilizar Git</p>
+
+<ol>
+  <li><strong>Control de Versiones</strong>
+    <ul>
+      <li>Permite rastrear los cambios en el código a lo largo del tiempo, facilitando la gestión de versiones.</li>
+    </ul>
+  </li>
+  <li><strong>Colaboración</strong>
+    <ul>
+      <li>Facilita el trabajo en equipo al permitir que múltiples desarrolladores trabajen en el mismo proyecto simultáneamente.</li>
+    </ul>
+  </li>
+  <li><strong>Ramas y Fusiones</strong>
+    <ul>
+      <li>Soporta la creación de ramas para trabajar en características o correcciones de manera aislada, que luego pueden fusionarse con la rama principal.</li>
+    </ul>
+  </li>
+  <li><strong>Deshacer Cambios</strong>
+    <ul>
+      <li>Proporciona herramientas para deshacer cambios o revertir a versiones anteriores en caso de errores.</li>
+    </ul>
+  </li>
+  <li><strong>Almacenamiento Eficiente</strong>
+    <ul>
+      <li>Git almacena datos de manera eficiente, lo que permite manejar proyectos grandes sin un gran consumo de espacio.</li>
+    </ul>
+  </li>
+  <li><strong>Rápido y Ligero</strong>
+    <ul>
+      <li>Las operaciones como commit, branch, y merge son rápidas debido a la naturaleza local de Git.</li>
+    </ul>
+  </li>
+  <li><strong>Trabajo Offline</strong>
+    <ul>
+      <li>Permite trabajar sin conexión a Internet; puedes realizar commits y otras operaciones localmente y sincronizarlos más tarde.</li>
+    </ul>
+  </li>
+  <li><strong>Integración Continua</strong>
+    <ul>
+      <li>Facilita la integración continua con herramientas de automatización para pruebas y despliegue.</li>
+    </ul>
+  </li>
+  <li><strong>Historial Completo</strong>
+    <ul>
+      <li>Mantiene un historial completo de cambios, lo que ayuda a comprender el desarrollo del proyecto y la toma de decisiones.</li>
+    </ul>
+  </li>
+  <li><strong>Amplio Soporte</strong>
+    <ul>
+      <li>Es ampliamente utilizado en la industria, lo que facilita la colaboración con otros desarrolladores y la integración con diversas herramientas.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><a href="https://https://fp.josedomingo.org/iaw2122/u01/github.html">MAS SOBRE GIT</a></p>
+
+      </section>
+    </div>
+    <footer>
+      <p>&copy; 2024 </p>
+    </footer>
+  </body>
+</html>

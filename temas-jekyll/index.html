@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Instalacion y creacion de un tema con jekyll | k1k04-blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Instalacion y creacion de un tema con jekyll" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Este es el blog de k1k04 para subir practicas." />
+<meta property="og:description" content="Este es el blog de k1k04 para subir practicas." />
+<link rel="canonical" href="/temas-jekyll/" />
+<meta property="og:url" content="/temas-jekyll/" />
+<meta property="og:site_name" content="k1k04-blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Instalacion y creacion de un tema con jekyll" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Este es el blog de k1k04 para subir practicas.","headline":"Instalacion y creacion de un tema con jekyll","url":"/temas-jekyll/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://previews.123rf.com/images/popaukropa/popaukropa1710/popaukropa171000042/87469433-letra-k-letra-bitcoin-alfabeto-de-criptomonedas-letras-de-dinero-virtual-ilustraci%C3%B3n-vectorial.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://previews.123rf.com/images/popaukropa/popaukropa1710/popaukropa171000042/87469433-letra-k-letra-bitcoin-alfabeto-de-criptomonedas-letras-de-dinero-virtual-ilustraci%C3%B3n-vectorial.jpg">  
+</head>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>k1k04-blog</h1>
+        <p>Este es el blog de k1k04 para subir practicas.</p>
+	<nav>
+		<ul>
+     			 <li><a href="/">Home</a></li>
+     			 <li><a href="/kiko/">Kiko</a></li>
+      			<li><a href="/lxc/">LXC</a></li>
+			<li><a href="/temas-jekyll/">Temas-jekyll</a></li>
+			<li><a href="/git/">GIT</a></li>
+		</ul>
+	</nav>
+
+      </header>
+      <section>
+        <h1 id="instalacion-y-creacion-de-un-tema-con-jekyll">Instalacion y creacion de un tema con jekyll</h1>
+
+<p><img src="https://themefisher.com/blog-thumb/best-jekyll-themes.webp" alt="alt text" /></p>
+<h2 id="introducción-a-jekyll-themes">Introducción a jekyll themes</h2>
+
+<p>Jekyll es un generador de sitios estáticos que permite crear blogs y páginas web de forma sencilla. Uno de sus aspectos más destacados son los <strong>temas</strong>, que ofrecen estilos y funcionalidades predefinidos, facilitando el diseño y la personalización del sitio sin necesidad de escribir código desde cero. Los temas en Jekyll suelen incluir:</p>
+
+<ol>
+  <li>
+    <p><strong>Diseño Responsivo</strong>: Muchos temas están diseñados para adaptarse a diferentes dispositivos, garantizando una buena experiencia de usuario en móviles y tabletas.</p>
+  </li>
+  <li>
+    <p><strong>Personalización</strong>: A través de archivos de configuración y estilos CSS, los usuarios pueden personalizar colores, fuentes y otros elementos visuales para alinearse con su marca o estilo personal.</p>
+  </li>
+  <li>
+    <p><strong>Funcionalidades Integradas</strong>: Los temas a menudo incluyen características como menús de navegación, galerías de imágenes, y secciones para publicaciones, facilitando la organización del contenido.</p>
+  </li>
+  <li>
+    <p><strong>Soporte para Plugins</strong>: Algunos temas permiten la integración de plugins para añadir funcionalidades adicionales, como optimización SEO o sistemas de comentarios.</p>
+  </li>
+</ol>
+
+<h2 id="buscamos-el-tema">Buscamos el tema</h2>
+
+<p>Por defecto con jekyll las paginas se crean con un tema llamado <del>minima</del> , como el mismo nombre dice este tema te da lo minimo para poder utilizar jekyll por eso vamos a buscar nuevos temas , esos temas lo podemos encontrar en los siguientes enlaces;</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plataforma</th>
+      <th>Enlace</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jekyll Themes</td>
+      <td><a href="http://jekyllthemes.org/">jekyllthemes.org</a></td>
+    </tr>
+    <tr>
+      <td>RubyGems (Jekyll Themes Search)</td>
+      <td><a href="https://rubygems.org/search?query=jekyll-theme-">rubygems.org</a></td>
+    </tr>
+    <tr>
+      <td>Jamstack Themes</td>
+      <td><a href="https://jamstackthemes.dev/ssg/jekyll/">jamstackthemes.dev</a></td>
+    </tr>
+    <tr>
+      <td>GitHub (Jekyll Themes)</td>
+      <td><a href="https://github.com/topics/jekyll-theme">github.com</a></td>
+    </tr>
+    <tr>
+      <td>Jekyll Themes IO</td>
+      <td><a href="https://jekyllthemes.io/">jekyllthemes.io</a></td>
+    </tr>
+    <tr>
+      <td>Jekyll Themes</td>
+      <td><a href="https://jekyll-themes.com/">jekyll-themes.com</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="instalacción">Instalacción</h2>
+
+<p>Primero lo que debemos de hacer es añadir al GEMFILE el enlace que nos muestre en la inslacion del tema.
+<code class="language-plaintext highlighter-rouge">echo "gem 'jekyll-theme-modernist', '~&gt; 0.2.0'" &gt;&gt; Gemfile</code>
+En este caso se esta utilizando el tema <strong>modernist</strong> pero se aplica con cualquiera.
+Luego utilizaremos el comando <code class="language-plaintext highlighter-rouge">bundle install</code> para instalar las gemas del tema.
+Segido lo que haremos es modificar el fichero _config.yml y en la parte de ;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+</code></pre></div></div>
+<p>Cambiaremos minima por el nombre de nuestro tema;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Build settings
+theme: jekyll-theme-modernist
+plugins:
+  - jekyll-feed
+</code></pre></div></div>
+<p>Ahora lo que haremos es un <code class="language-plaintext highlighter-rouge">bundle update</code> para al igual que bundle install, bundle update resuelve las dependencias para asegurarse de que las nuevas versiones de las gemas sean compatibles entre sí.</p>
+
+<p>y ya tendriamos nuestro tema añadido correctamente.</p>
+
+      </section>
+    </div>
+    <footer>
+      <p>&copy; 2024 </p>
+    </footer>
+  </body>
+</html>

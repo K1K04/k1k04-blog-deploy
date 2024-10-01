@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Introduccion a lxc | k1k04-blog</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Introduccion a lxc" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Este es el blog de k1k04 para subir practicas." />
+<meta property="og:description" content="Este es el blog de k1k04 para subir practicas." />
+<link rel="canonical" href="/lxc/" />
+<meta property="og:url" content="/lxc/" />
+<meta property="og:site_name" content="k1k04-blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Introduccion a lxc" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Este es el blog de k1k04 para subir practicas.","headline":"Introduccion a lxc","url":"/lxc/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://previews.123rf.com/images/popaukropa/popaukropa1710/popaukropa171000042/87469433-letra-k-letra-bitcoin-alfabeto-de-criptomonedas-letras-de-dinero-virtual-ilustraci%C3%B3n-vectorial.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://previews.123rf.com/images/popaukropa/popaukropa1710/popaukropa171000042/87469433-letra-k-letra-bitcoin-alfabeto-de-criptomonedas-letras-de-dinero-virtual-ilustraci%C3%B3n-vectorial.jpg">  
+</head>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>k1k04-blog</h1>
+        <p>Este es el blog de k1k04 para subir practicas.</p>
+	<nav>
+		<ul>
+     			 <li><a href="/">Home</a></li>
+     			 <li><a href="/kiko/">Kiko</a></li>
+      			<li><a href="/lxc/">LXC</a></li>
+			<li><a href="/temas-jekyll/">Temas-jekyll</a></li>
+			<li><a href="/git/">GIT</a></li>
+		</ul>
+	</nav>
+
+      </header>
+      <section>
+        <h1 id="introducción-de-contenedores-lxc">Introducción de contenedores LXC</h1>
+
+<p><a href="https://www.josedomingo.org/pledin/2021/12/introduccion-lxc/"><img src="https://www.josedomingo.org/pledin/assets/wp-content/uploads/2021/12/lxc.png" alt="url-pledin" /></a></p>
+
+<p><strong>LXC (Linux Containers)</strong> es una tecnología de virtualización ligera que permite ejecutar múltiples sistemas Linux de manera aislada en un solo host, compartiendo el mismo kernel del sistema operativo. A diferencia de las máquinas virtuales tradicionales, <strong>LXC no requiere un hipervisor</strong>, lo que lo hace más eficiente en términos de recursos. Los <strong>contenedores</strong> proporcionan un entorno similar al de una máquina virtual, pero con menos sobrecarga, lo que los hace ideales para tareas como la creación de entornos de desarrollo, la implementación de aplicaciones, y la gestión de servicios en entornos de nube.</p>
+
+<blockquote>
+  <p>LXC representa un punto de inflexión en la evolución de la virtualización, proporcionando una forma eficiente y ligera de ejecutar múltiples entornos Linux en un solo kernel, lo que lo hace adecuado para infraestructuras modernas como microservicios y DevOps.</p>
+</blockquote>
+
+<h2 id="instalacion-lxc">Instalacion LXC</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Distribución</th>
+      <th>Método de Instalación</th>
+      <th>Comando</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Ubuntu</em></td>
+      <td>Instalación desde los repositorios oficiales</td>
+      <td><code class="language-plaintext highlighter-rouge">sudo apt update &amp;&amp; sudo apt install lxc</code></td>
+    </tr>
+    <tr>
+      <td><em>Debian</em></td>
+      <td>Instalación desde los repositorios oficiales</td>
+      <td><code class="language-plaintext highlighter-rouge">sudo apt update &amp;&amp; sudo apt install lxc</code></td>
+    </tr>
+    <tr>
+      <td><em>Fedora</em></td>
+      <td>Instalación desde los repositorios oficiales</td>
+      <td><code class="language-plaintext highlighter-rouge">sudo dnf install lxc</code></td>
+    </tr>
+    <tr>
+      <td><em>CentOS/RHEL</em></td>
+      <td>Activar el repositorio EPEL y luego instalar</td>
+      <td><code class="language-plaintext highlighter-rouge">sudo yum install epel-release &amp;&amp; sudo yum install lxc</code></td>
+    </tr>
+    <tr>
+      <td><em>Arch Linux</em></td>
+      <td>Instalación desde los repositorios oficiales</td>
+      <td><code class="language-plaintext highlighter-rouge">sudo pacman -S lxc</code></td>
+    </tr>
+    <tr>
+      <td><em>OpenSUSE</em></td>
+      <td>Instalación desde los repositorios oficiales</td>
+      <td><code class="language-plaintext highlighter-rouge">sudo zypper install lxc</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="creacion-de-contenedores-lxc">Creacion de contenedores LXC</h2>
+
+<p>Al crear un contenedor se bajará el sistema de archivos que formará parte de él. La primera vez que bajamos con   <del>debootstrap</del> una versión de un sistema operativo se descargará un sistema de archivo mínimo del sistema (que llamamos plantilla) que servirá para crear todos los contenedores que creemos de la misma versión del sistema.</p>
+
+<p><code class="language-plaintext highlighter-rouge">sudo lxc-create -n contenedor1 -t debian -- -r bullseye</code></p>
+
+<ul>
+  <li>-n: Nombre del contenedor</li>
+  <li>-t: Nombre de la plantilla.</li>
+  <li>-r: Es una opción de la plantilla. Es el nombre de la versión del sistema operativo. Para ver más opciones de una plantilla ejecutamos: <code class="language-plaintext highlighter-rouge">lxc-create -t debian -h</code>.</li>
+</ul>
+
+<p>Comprobar que se ha creado un contenedor;
+<code class="language-plaintext highlighter-rouge">sudo lxc-ls -f</code></p>
+
+<h2 id="ventajas-y-desventajas-de-lxc">Ventajas y Desventajas de LXC</h2>
+
+<h3 id="ventajas">Ventajas</h3>
+<ul>
+  <li><strong>Ligereza</strong>: LXC utiliza menos recursos que las máquinas virtuales, ya que comparte el mismo kernel.</li>
+  <li><strong>Rápido inicio</strong>: Los contenedores LXC se inician y detienen más rápidamente que las máquinas virtuales.</li>
+  <li><strong>Aislamiento</strong>: Proporciona un alto nivel de aislamiento entre contenedores, similar al de las máquinas virtuales.</li>
+  <li><strong>Facilidad de uso</strong>: La gestión de contenedores es sencilla y se puede hacer a través de herramientas de línea de comandos.</li>
+  <li><strong>Portabilidad</strong>: Los contenedores pueden ser fácilmente movidos entre diferentes hosts que soporten LXC.</li>
+  <li><strong>Escalabilidad</strong>: Permite la creación rápida de múltiples entornos de prueba o producción.</li>
+</ul>
+
+<h3 id="desventajas">Desventajas</h3>
+<ul>
+  <li><strong>Compatibilidad limitada</strong>: Solo puede ejecutar sistemas operativos compatibles con el kernel del host.</li>
+  <li><strong>Configuración compleja</strong>: La configuración inicial y la gestión de contenedores pueden ser complicadas para principiantes.</li>
+  <li><strong>Menor seguridad en comparación con VM</strong>: Aunque proporciona aislamiento, no es tan seguro como las máquinas virtuales, ya que comparten el mismo kernel.</li>
+  <li><strong>Dependencia del kernel</strong>: Los problemas en el kernel pueden afectar a todos los contenedores en ejecución.</li>
+  <li><strong>Falta de soporte de algunas herramientas</strong>: Algunas herramientas y software pueden no ser totalmente compatibles con entornos LXC.</li>
+</ul>
+
+      </section>
+    </div>
+    <footer>
+      <p>&copy; 2024 </p>
+    </footer>
+  </body>
+</html>
